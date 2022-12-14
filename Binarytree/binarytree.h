@@ -55,7 +55,7 @@ public:
     {
         TreeNode* x = this;
         while (x->right != nullptr)
-            x = x - right;
+            x = x -> right;
         return x;
     }
 
@@ -266,4 +266,3 @@ public:
         printSubtree(root, 0);
     }
 };
-
