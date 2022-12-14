@@ -40,8 +40,15 @@ public:
 
     TreeNode* successor()
     {
-        if (this->right != nullptr)
+        if (this->right != nullptr) 
+        {
             return this->right->minimum();
+        }
+        else
+        {
+            throw 4;
+        }
+            
     }
 
     TreeNode* minimum()

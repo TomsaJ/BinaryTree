@@ -25,17 +25,22 @@ int main(int argc, char** argv)
 			Zufallgenerator funktioniert noch nicht ganz
 		*/
 		int number;
-		srand(time(0));
+		/*srand(time(0));
 		for (int i = 0; i < 10; i++)
 		{
 			number = 1+(rand()% 15)+1;
 			tree.insert(number);
-		}
+		}*/
+
 
 		tree.insert(5);
 		tree.insert(3);
 		tree.insert(7);
 		tree.insert(4);
+		tree.insert(4);
+		tree.insert(5);
+		tree.insert(12);
+		tree.insert(400);
 
 
 
@@ -89,8 +94,8 @@ int main(int argc, char** argv)
 		*/
 
 		// Suchen:
-		cout << "Searching 3, found: " << tree.search(3)->key << "\n";
-		cout << "Searching 21 (not in list), found: " << tree.search(21) << "\n"; // Falls element nicht in Liste: nullptr
+		cout << "Searching 3, found: " << tree.search(3)->key << endl;
+		cout << "Searching 21 (not in list), found: " << tree.search(21) << endl; // Falls element nicht in Liste: nullptr
 
 		// Loeschen:
 		/*std::cout << "removing 8\n";
@@ -104,17 +109,17 @@ int main(int argc, char** argv)
 		// Sonderfall: Wurzel loeschen:
 		std::cout << "removing 5 (root node)\n";
 		tree.deleteNode(tree.search(5));
-		std::cout << tree << "\n";
+		std::cout << tree << endl;
 
 		// Predecessor testen:
 		std::cout << "removing element before 4 (3)\n";
 		tree.deleteNode(tree.search(4)->predecessor());
-		std::cout << tree << "\n";
+		std::cout << tree << endl;
 
 		// Successor testen:
 		std::cout << "removing element after 4 (7)\n";
 		tree.deleteNode(tree.search(4)->successor());
-		std::cout << tree << "\n";
+		std::cout << tree << endl;
 
 		// <<--  Hier wird aufgrund des Scope-Endes automatisch der destruktor von tree aufgerufen
 
@@ -122,9 +127,14 @@ int main(int argc, char** argv)
 
 		return 0;
 	}
-	catch(exception e)
+	catch(int& e)
 	{
+		string error;
+		switch (e) {
 
+		case 4:
+			error = "nicht vorhanden";
+		}
 	}
 
 	
