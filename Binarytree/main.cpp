@@ -126,11 +126,11 @@ int main(int argc, char** argv)
 					cin >> number;
 					if (tree.search(number) != nullptr)
 					{
-						cout << "Die Zahl"<<number << "ist vorhanden" << endl;
+						cout << "Die Zahl "<<number << " ist vorhanden" << endl;
 					}
 					else
 					{
-						cout << "Die Zahl"<<number << "ist NICHT vorhanden" << endl;
+						cout << "Die Zahl "<<number << " ist NICHT vorhanden" << endl;
 					}
 					system("pause");
 					break;
