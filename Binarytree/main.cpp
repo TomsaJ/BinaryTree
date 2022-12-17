@@ -6,6 +6,8 @@
 #include "binarytree.h"
 
 char input;
+int inputnumber;
+int anzahl;
 
 void randomnumber()
 {
@@ -14,19 +16,22 @@ void randomnumber()
 
 int main(int argc, char** argv)
 {
-	try 
+	try
 	{
 		// TreeNode<int> tree(5);
 		SearchTree<int> tree;
 
 		// Einfuegen:
-		//randomnumber;
+		randomnumber;
 		/*
 			Zufallgenerator funktioniert noch nicht ganz
 		*/
+
+		
 		int number;
-		/*srand(time(0));
-		for (int i = 0; i < 10; i++)
+		
+		srand(time(0));
+		/*for (int i = 0; i < 10; i++)
 		{
 			number = 1+(rand()% 15)+1;
 			tree.insert(number);
@@ -47,97 +52,149 @@ int main(int argc, char** argv)
 
 		// Ausdrucken:
 		cout << "Tree:" << tree << endl; // erwartet: 2, 3, 4, 5, 7, 8, 9, 10,
-		
-		
+
+
 		/*
 		* Menue wird noch bearbeitet
 		*/
-		/*do
+		do
 		{
+			
 			system("CLS");
 			cout
+				<< tree << endl
 				<< "Binarysearchtree" << endl
 				<< "1. Neue Zahl einfügen" << endl
 				<< "2. Zahl löschen" << endl
 				<< "3. Zahl suchen" << endl
 				<< "9. Beenden" << endl;
+			cout << "Searching 21 (not in list), found: " << tree.search(21) << endl; // Falls element nicht in Liste: nullptr
 
 
-
-		cin >> input;
-		while (cin.fail())
-		{
-			std::cin.clear();
-			std::cin.ignore(256, '\n');
 			cin >> input;
-		}
-		
-		try
-            {
+			while (cin.fail())
+			{
+				std::cin.clear();
+				std::cin.ignore(256, '\n');
+				cin >> input;
+			}
 
-                switch (input)
-                {
-                case '1':
-                    break;
+			try
+			{
 
-                case '2':
-                    break;
-                case '3':
-                    break;
-                case '9':
-                    cout << "Programm wird beendet";
-                    break;
-                default:
-                    cout << "Menüpunkt nicht vorhanden" << endl;
-                    system("pause");
-                }
-		*/
+				switch (input)
+				{
+				case '1':
+					cout << " Wie viele Zahlen sollen hinzugefügt werden" << endl;
+					cin >> anzahl;
+					cout << "1 Zufaellige?" << endl;
+					cout << "2 Eigene" << endl;
+					cin >> input;
+					try {
+						switch (input)
+						{
+						case '1':
+							for (int i = 0; i < anzahl; i++)
+							{
+								number = 1 + (rand() % 15) + 1;
+								tree.insert(number);
+							}
+							break;
+						case '2':
+							for (int i = 0; i < anzahl; i++)
+							{
+								cout << "Zahl eingeben" << endl;
+								cin >> number;
+								tree.insert(number);
+							}
+							break;
+						}
+					}
+					catch (int& e)
+					{
 
-		// Suchen:
-		cout << "Searching 3, found: " << tree.search(3)->key << endl;
-		cout << "Searching 21 (not in list), found: " << tree.search(21) << endl; // Falls element nicht in Liste: nullptr
+					}
+					break;
 
-		// Loeschen:
-		/*std::cout << "removing 8\n";
-		tree.deleteNode(tree.search(8));
-		std::cout << tree << "\n";*/
+				case '2':
+					cout << "Zuloeschende Zahl:" << endl;
+					cin >> inputnumber;
+					tree.deleteNode(tree.search(inputnumber));
+					break;
+				case '3':
+					cout << "Gesuchte Zahl:" << endl;
+					cin >> number;
+					if (tree.search(number) != nullptr)
+					{
+						cout << "Die Zahl"<<number << "ist vorhanden" << endl;
+					}
+					else
+					{
+						cout << "Die Zahl"<<number << "ist NICHT vorhanden" << endl;
+					}
+					system("pause");
+					break;
+				case '9':
+					cout << "Programm wird beendet";
+					break;
+				default:
+					cout << "Menüpunkt nicht vorhanden" << endl;
+					system("pause");
+				}
 
-		/*std::cout << "removing 10\n";
-		tree.deleteNode(tree.search(10));
-		std::cout << tree << "\n";*/
 
-		// Sonderfall: Wurzel loeschen:
-		std::cout << "removing 5 (root node)\n";
-		tree.deleteNode(tree.search(5));
-		std::cout << tree << endl;
+				/*
+				// Suchen:
+				cout << "Searching 3, found: " << tree.search(3)->key << endl;
+				cout << "Searching 21 (not in list), found: " << tree.search(21) << endl; // Falls element nicht in Liste: nullptr
 
-		// Predecessor testen:
-		std::cout << "removing element before 4 (3)\n";
-		tree.deleteNode(tree.search(4)->predecessor());
-		std::cout << tree << endl;
+				// Loeschen:
+				/*std::cout << "removing 8\n";
+				tree.deleteNode(tree.search(8));
+				std::cout << tree << "\n";
 
-		// Successor testen:
-		std::cout << "removing element after 4 (7)\n";
-		tree.deleteNode(tree.search(4)->successor());
-		std::cout << tree << endl;
+				/*std::cout << "removing 10\n";
+				tree.deleteNode(tree.search(10));
+				std::cout << tree << "\n";
 
-		// <<--  Hier wird aufgrund des Scope-Endes automatisch der destruktor von tree aufgerufen
+				// Sonderfall: Wurzel loeschen:
+				std::cout << "removing 5 (root node)\n";
+				tree.deleteNode(tree.search(5));
+				std::cout << tree << endl;
 
-		std::cout << "deleted tree, no errors occurred\n"; // Falls dieser text NICHT erscheint, dann ist das Programm im Destruktor von tree abgestuerzt
+				// Predecessor testen:
+				std::cout << "removing element before 4 (3)\n";
+				tree.deleteNode(tree.search(4)->predecessor());
+				std::cout << tree << endl;
 
-		return 0;
+				// Successor testen:
+				std::cout << "removing element after 4 (7)\n";
+				tree.deleteNode(tree.search(4)->successor());
+				std::cout << tree << endl;
+
+				// <<--  Hier wird aufgrund des Scope-Endes automatisch der destruktor von tree aufgerufen
+
+				std::cout << "deleted tree, no errors occurred\n"; // Falls dieser text NICHT erscheint, dann ist das Programm im Destruktor von tree abgestuerzt*/
+				
+
+			}
+			catch (int& e)
+			{
+				string error;
+				switch (e) {
+
+				case 4:
+					error = "nicht vorhanden";
+				}
+			}
+		} while (input != '9');
+
 	}
-	catch(int& e)
+	catch (const char* err)
 	{
-		string error;
-		switch (e) {
-
-		case 4:
-			error = "nicht vorhanden";
-		}
+		cout << err << endl;
 	}
-
-	
+	return 0;
 }
 
 // Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
