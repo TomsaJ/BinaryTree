@@ -1,6 +1,6 @@
 # Binarytree
 
-Ein Prjekt das in dem Modul Grundlagen der Informatik 3 erstellt wurde.
+Ein Projekt das in dem Modul Grundlagen der Informatik 3 erstellt wurde.
 
 ## Branchinfo
 
