@@ -4,9 +4,10 @@ Ein Prjekt das in dem Modul Grundlagen der Informatik 3 erstellt wurde.
 
 ## Branchinfo
 
-#Branch:
-    header_binarybaum   -> Beginn des Projektes     (gemergt in main am 14.12.2022)
-    menue               -> Ausarbeitung des Menüs   (noch nicht gemergt)
+Branch: <br/>
+header_binarybaum   -> Beginn des Projektes     (gemergt in main am 14.12.2022) <br/>
+menue               -> Ausarbeitung des Menüs   (noch nicht gemergt)
+
 
 ## Authors
 Laureen Roccotelli
