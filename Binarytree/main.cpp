@@ -1,4 +1,4 @@
-// Binarytree.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
+// Binarytree.cpp : Diese Datei enthï¿½lt die Funktion "main". Hier beginnt und endet die Ausfï¿½hrung des Programms.
 //
 
 #include <iostream>
@@ -44,7 +44,7 @@ void deletenode()
 	}
 	else
 	{
-		cout << "Zahl ist in dem Tree nicht vorhanden und kann nicht gelöscht werden" << endl;
+		cout << "Zahl ist in dem Tree nicht vorhanden und kann nicht gelï¿½scht werden" << endl;
 	}
 	system("pause");
 }
@@ -98,7 +98,12 @@ int main(int argc, char** argv)
 		while (input != '9')
 		{
 			
-			system("CLS");
+			#ifdef WINDOWS
+    std::system("cls");
+#else
+    // Assume POSIX
+    std::system ("clear");
+#endif
 			cout
 				<< tree << endl
 				<< "Binarysearchtree" << endl
@@ -162,7 +167,7 @@ int main(int argc, char** argv)
 					cout << "Programm wird beendet";
 					break;
 				default:
-					cout << "Menüpunkt nicht vorhanden" << endl;
+					cout << "Menï¿½punkt nicht vorhanden" << endl;
 					system("pause");
 				}
 
@@ -206,13 +211,13 @@ int main(int argc, char** argv)
 	return 0;
 }
 
-// Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
-// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
+// Programm ausfï¿½hren: STRG+F5 oder Menï¿½eintrag "Debuggen" > "Starten ohne Debuggen starten"
+// Programm debuggen: F5 oder "Debuggen" > Menï¿½ "Debuggen starten"
 
-// Tipps für den Einstieg: 
-//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
+// Tipps fï¿½r den Einstieg: 
+//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufï¿½gen/Verwalten von Dateien.
 //   2. Verwenden Sie das Team Explorer-Fenster zum Herstellen einer Verbindung mit der Quellcodeverwaltung.
 //   3. Verwenden Sie das Ausgabefenster, um die Buildausgabe und andere Nachrichten anzuzeigen.
 //   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
-//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
-//   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.
+//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufï¿½gen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufï¿½gen", um dem Projekt vorhandene Codedateien hinzuzufï¿½gen.
+//   6. Um dieses Projekt spï¿½ter erneut zu ï¿½ffnen, wechseln Sie zu "Datei" > "ï¿½ffnen" > "Projekt", und wï¿½hlen Sie die SLN-Datei aus.
