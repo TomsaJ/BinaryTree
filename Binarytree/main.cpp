@@ -8,27 +8,75 @@
 char input;
 int inputnumber;
 int anzahl;
+int number;
+SearchTree<int> tree;
 
-void randomnumber()
+
+void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
 {
-	
+	for (int i = 0; i < afrn; i++)
+	{
+		number = 1 + (rand() % 15) + 1;
+		tree.insert(number);
+	}
+}
+
+void insertownNumber(int afon) //afon: anzahlforownnumber
+{
+	for (int i = 0; i < afon; i++)
+	{
+		cout << "Zahl eingeben" << endl;
+		cin >> number;
+		tree.insert(number);
+	}
+}
+
+void deletenode()
+{
+	cout << "Zuloeschende Zahl:";
+	cin >> inputnumber;
+	if (tree.search(inputnumber) != nullptr)
+	{
+		cout << "Alter Tree:" << tree << endl;
+		tree.deleteNode(tree.search(inputnumber));
+		cout << "Neuer Tree:" << tree << endl;
+
+	}
+	else
+	{
+		cout << "Zahl ist in dem Tree nicht vorhanden und kann nicht gelöscht werden" << endl;
+	}
+	system("pause");
+}
+
+void start()
+{
+	cout << " Mit wie viele Zahlen soll der Baum erstellt werden" << endl;
+	cin >> anzahl;
+	cout << "1. Zufaellige Zahlen" << endl;
+	cout << "2. Eigene Zahlen" << endl;
+	cin >> input;
+		switch (input)
+		{
+		case '1':
+			insertRandomNumber(anzahl);
+			break;
+		case '2':
+			insertownNumber(anzahl);
+			break;
+		}
 }
 
 int main(int argc, char** argv)
 {
-	try
-	{
+	
 		// TreeNode<int> tree(5);
-		SearchTree<int> tree;
 
 		// Einfuegen:
-		randomnumber;
 		/*
 			Zufallgenerator funktioniert noch nicht ganz
 		*/
 
-		
-		int number;
 		
 		srand(time(0));
 		/*for (int i = 0; i < 10; i++)
@@ -37,18 +85,8 @@ int main(int argc, char** argv)
 			tree.insert(number);
 		}*/
 
-
-		tree.insert(5);
-		tree.insert(3);
-		tree.insert(7);
-		tree.insert(4);
-		tree.insert(4);
-		tree.insert(5);
-		tree.insert(12);
-		tree.insert(400);
-
-
-
+		start();
+		
 
 		// Ausdrucken:
 		cout << "Tree:" << tree << endl; // erwartet: 2, 3, 4, 5, 7, 8, 9, 10,
@@ -57,18 +95,17 @@ int main(int argc, char** argv)
 		/*
 		* Menue wird noch bearbeitet
 		*/
-		do
+		while (input != '9')
 		{
 			
 			system("CLS");
 			cout
 				<< tree << endl
 				<< "Binarysearchtree" << endl
-				<< "1. Neue Zahl einfügen" << endl
-				<< "2. Zahl löschen" << endl
+				<< "1. Neue Zahl einfuegen" << endl
+				<< "2. Zahl loeschen" << endl
 				<< "3. Zahl suchen" << endl
 				<< "9. Beenden" << endl;
-			cout << "Searching 21 (not in list), found: " << tree.search(21) << endl; // Falls element nicht in Liste: nullptr
 
 
 			cin >> input;
@@ -79,13 +116,11 @@ int main(int argc, char** argv)
 				cin >> input;
 			}
 
-			try
-			{
 
 				switch (input)
 				{
 				case '1':
-					cout << " Wie viele Zahlen sollen hinzugefügt werden" << endl;
+					cout << "Wie viele Zahlen sollen hinzugefuegt werden" << endl;
 					cin >> anzahl;
 					cout << "1 Zufaellige?" << endl;
 					cout << "2 Eigene" << endl;
@@ -94,19 +129,10 @@ int main(int argc, char** argv)
 						switch (input)
 						{
 						case '1':
-							for (int i = 0; i < anzahl; i++)
-							{
-								number = 1 + (rand() % 15) + 1;
-								tree.insert(number);
-							}
+							insertRandomNumber(anzahl);
 							break;
 						case '2':
-							for (int i = 0; i < anzahl; i++)
-							{
-								cout << "Zahl eingeben" << endl;
-								cin >> number;
-								tree.insert(number);
-							}
+							insertownNumber(anzahl);
 							break;
 						}
 					}
@@ -117,9 +143,7 @@ int main(int argc, char** argv)
 					break;
 
 				case '2':
-					cout << "Zuloeschende Zahl:" << endl;
-					cin >> inputnumber;
-					tree.deleteNode(tree.search(inputnumber));
+					deletenode();
 					break;
 				case '3':
 					cout << "Gesuchte Zahl:" << endl;
@@ -177,23 +201,8 @@ int main(int argc, char** argv)
 				std::cout << "deleted tree, no errors occurred\n"; // Falls dieser text NICHT erscheint, dann ist das Programm im Destruktor von tree abgestuerzt*/
 				
 
-			}
-			catch (int& e)
-			{
-				string error;
-				switch (e) {
+		}
 
-				case 4:
-					error = "nicht vorhanden";
-				}
-			}
-		} while (input != '9');
-
-	}
-	catch (const char* err)
-	{
-		cout << err << endl;
-	}
 	return 0;
 }
 
