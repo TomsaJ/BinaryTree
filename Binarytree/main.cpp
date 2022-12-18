@@ -178,11 +178,11 @@ int main(int argc, char** argv)
 				cout << "Searching 21 (not in list), found: " << tree.search(21) << endl; // Falls element nicht in Liste: nullptr
 
 				// Loeschen:
-				/*std::cout << "removing 8\n";
+				std::cout << "removing 8\n";
 				tree.deleteNode(tree.search(8));
 				std::cout << tree << "\n";
 
-				/*std::cout << "removing 10\n";
+				std::cout << "removing 10\n";
 				tree.deleteNode(tree.search(10));
 				std::cout << tree << "\n";
 
