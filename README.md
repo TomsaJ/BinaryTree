@@ -1,6 +1,6 @@
 # Binarytree
 
-Ein Projekt das in dem Modul Grundlagen der Informatik 3 erstellt wurde.
+Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde.
 
 ## Branchinfo
 
@@ -9,8 +9,8 @@ header_binarybaum   -> Beginn des Projektes     (gemergt in main am 14.12.2022) 
 menue               -> Ausarbeitung des Menüs   (noch nicht gemergt)
 
 ## Installation
-Da Programm wird in der main.cpp ausgefüht.  <br/>
-Kann mit den Betriebssysteme Windows, MacOs und Linux ausgeführt wrrden.
+Da Programm wird in der main.cpp ausgefüht.
+Es kann auf Windows so wie auf Linux ausgeführt werden.
 
 ## Authors
 Laureen Roccotelli <br/>
