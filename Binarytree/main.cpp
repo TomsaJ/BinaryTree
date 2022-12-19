@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <ctime>
+#include <conio.h>
 #include "binarytree.h"
 
 char input;
@@ -11,6 +12,17 @@ int anzahl;
 int number;
 SearchTree<int> tree;
 
+
+void pause()
+{
+	while (1)
+	{
+		if (_kbhit())
+		{
+			break;
+		}
+	}
+}
 
 void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
 {
@@ -33,6 +45,7 @@ void insertownNumber(int afon) //afon: anzahlforownnumber
 
 void deletenode()
 {
+	cout << "Aktueller Baum:" << tree << endl;
 	cout << "Zuloeschende Zahl:";
 	cin >> inputnumber;
 	if (tree.search(inputnumber) != nullptr)
@@ -46,12 +59,20 @@ void deletenode()
 	{
 		cout << "Zahl ist in dem Tree nicht vorhanden und kann nicht gel�scht werden" << endl;
 	}
-	system("pause");
+
+	#ifdef _WIN32
+		system("pause");
+	#else
+		pause();
+	#endif
+	
 }
+
+
 
 void start()
 {
-	cout << " Mit wie viele Zahlen soll der Baum erstellt werden" << endl;
+	cout << "Mit wie viele Zahlen soll der Baum erstellt werden" << endl;
 	cin >> anzahl;
 	cout << "1. Zufaellige Zahlen" << endl;
 	cout << "2. Eigene Zahlen" << endl;
@@ -98,12 +119,11 @@ int main(int argc, char** argv)
 		while (input != '9')
 		{
 			
-			#ifdef WINDOWS
-    std::system("cls");
-#else
-    // Assume POSIX
-    std::system ("clear");
-#endif
+		#ifdef _WIN32
+			system("cls");
+		#else
+			system ("clear");
+		#endif
 			cout
 				<< tree << endl
 				<< "Binarysearchtree" << endl
@@ -161,51 +181,23 @@ int main(int argc, char** argv)
 					{
 						cout << "Die Zahl "<<number << " ist NICHT vorhanden" << endl;
 					}
-					system("pause");
+					#ifdef _WIN32
+						system("pause");
+					#else
+						pause();
+					#endif
 					break;
 				case '9':
 					cout << "Programm wird beendet";
 					break;
 				default:
-					cout << "Men�punkt nicht vorhanden" << endl;
-					system("pause");
+					cout << "Menuepunkt nicht vorhanden" << endl;
+					#ifdef _WIN32
+						system("pause");
+					#else
+						pause();
+					#endif
 				}
-
-
-				/*
-				// Suchen:
-				cout << "Searching 3, found: " << tree.search(3)->key << endl;
-				cout << "Searching 21 (not in list), found: " << tree.search(21) << endl; // Falls element nicht in Liste: nullptr
-
-				// Loeschen:
-				std::cout << "removing 8\n";
-				tree.deleteNode(tree.search(8));
-				std::cout << tree << "\n";
-
-				std::cout << "removing 10\n";
-				tree.deleteNode(tree.search(10));
-				std::cout << tree << "\n";
-
-				// Sonderfall: Wurzel loeschen:
-				std::cout << "removing 5 (root node)\n";
-				tree.deleteNode(tree.search(5));
-				std::cout << tree << endl;
-
-				// Predecessor testen:
-				std::cout << "removing element before 4 (3)\n";
-				tree.deleteNode(tree.search(4)->predecessor());
-				std::cout << tree << endl;
-
-				// Successor testen:
-				std::cout << "removing element after 4 (7)\n";
-				tree.deleteNode(tree.search(4)->successor());
-				std::cout << tree << endl;
-
-				// <<--  Hier wird aufgrund des Scope-Endes automatisch der destruktor von tree aufgerufen
-
-				std::cout << "deleted tree, no errors occurred\n"; // Falls dieser text NICHT erscheint, dann ist das Programm im Destruktor von tree abgestuerzt*/
-				
-
 		}
 
 	return 0;
