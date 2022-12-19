@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <ctime>
-#include <conio.h>
 #include "binarytree.h"
 
 char input;
@@ -15,13 +14,11 @@ SearchTree<int> tree;
 
 void pause()
 {
-	while (1)
-	{
-		if (_kbhit())
-		{
-			break;
-		}
-	}
+	//aktuelle Lösung 
+	string a;
+	cout << "Taste 9 zum fortfahren drücken" << endl;
+	cin >> a;
+	
 }
 
 void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
