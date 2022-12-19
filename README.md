@@ -9,8 +9,8 @@ header_binarybaum   -> Beginn des Projektes     (gemergt in main am 14.12.2022) 
 menue               -> Ausarbeitung des Menüs   (noch nicht gemergt)
 
 ## Installation
-Da Programm wird in der main.cpp ausgefüht.
-Es kann auf Windows so wie auf Linux ausgeführt werden.
+Da Programm wird in der main.cpp ausgefüht.  <br/>
+Kann mit den Betriebssysteme Windows, MacOs und Linux ausgeführt wrrden.
 
 ## Authors
 Laureen Roccotelli <br/>
