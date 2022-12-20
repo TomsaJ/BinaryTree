@@ -16,8 +16,8 @@ void pause()
 {
 	//aktuelle Lösung 
 	string a;
-	cout << "Taste 9 zum fortfahren drücken" << endl;
-	cin >> a;
+	cout << "Taste 9 und enter zum fortfahren drücken" << endl;
+	cin >> a ;
 	
 }
 
