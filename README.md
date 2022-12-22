@@ -7,11 +7,12 @@ Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
 
 Branch: <br/>
 header_binarybaum   -> Beginn des Projektes     (gemergt in main am 14.12.2022) <br/>
-menue               -> Ausarbeitung des Menüs   (noch nicht gemergt)
+menue               -> Ausarbeitung des Menüs   (noch nicht gemergt)<br/>
+randomnumber        -> Erstellen von zufallzahlen (noch nicht gemergt)
 
 ## Installation
 Da Programm wird in der main.cpp ausgefüht.
-Es kann auf Windows so wie auf Linux ausgeführt werden.
+Es kann auf Windows so wie auf Linux und MacOs ausgeführt werden.
 
 ## Authors
 Laureen Roccotelli <br/>
