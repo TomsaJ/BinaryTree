@@ -1,7 +1,7 @@
 # Binarytree
 
-Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde.
-<img src="https://assets.leetcode.com/uploads/2020/11/26/tmp-tree.jpg" width="250px"/>
+Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
+<img src="https://assets.leetcode.com/uploads/2020/11/26/tmp-tree.jpg" width="315px"/>
 
 ## Branchinfo
 
