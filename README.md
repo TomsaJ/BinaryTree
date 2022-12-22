@@ -1,6 +1,7 @@
 # Binarytree
 
 Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde.
+<img src="https://en.wikipedia.org/wiki/File:Binary_search_tree.svg" width="512px"/>
 
 ## Branchinfo
 
