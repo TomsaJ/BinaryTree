@@ -7,8 +7,8 @@ Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
 
 Branch: <br/>
 header_binarybaum   -> Beginn des Projektes     (gemergt in main am 14.12.2022) <br/>
-menue               -> Ausarbeitung des Menüs   (noch nicht gemergt)<br/>
-randomnumber        -> Erstellen von zufallzahlen (noch nicht gemergt)
+menue               -> Ausarbeitung des Menüs   (gemergt in main am 23.12.2022)<br/>
+randomnumber        -> Erstellen von zufallzahlen (gemergt in menue am 23.13.2022)
 
 ## Installation
 Da Programm wird in der main.cpp ausgefüht.
