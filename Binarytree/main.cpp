@@ -11,14 +11,26 @@ int anzahl;
 int number;
 SearchTree<int> tree;
 
+void clear()
+{
+	#ifdef _WIN32
+			system("cls");
+		#else
+			system ("clear");
+		#endif
+}
 
 void pause()
 {
+
 	//aktuelle Lösung 
-	string a;
-	cout << "Taste 9 und enter zum fortfahren drücken" << endl;
-	cin >> a ;
-	
+	#ifdef _WIN32
+		system("pause");
+	#else
+		string a;
+		cout << "Taste 9 und enter zum fortfahren drücken" << endl;
+		cin >> a ;
+	#endif
 }
 
 void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
@@ -27,6 +39,26 @@ void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
 	{
 		number = 1 + (rand() % 15) + 1;
 		tree.insert(number);
+	}
+}
+
+void insertRangeRandomNumber(int afrn)
+{
+	int min;
+	int max;
+	clear();
+	cout << "Was soll die kleinste Zahl sein" << endl;
+	cin >> min;
+	cout << "Was soll die größte Zahl sein" << endl;
+	cin >> max;
+	for (int i = 0; i < afrn;)
+	{
+		number = 1 + (rand()) + 1;
+		if( number >= min && number <= max)
+		{
+			tree.insert(number);
+			i++;
+		}
 	}
 }
 
@@ -57,11 +89,7 @@ void deletenode()
 		cout << "Zahl ist in dem Tree nicht vorhanden und kann nicht gel�scht werden" << endl;
 	}
 
-	#ifdef _WIN32
-		system("pause");
-	#else
-		pause();
-	#endif
+	pause();
 	
 }
 
@@ -77,7 +105,7 @@ void start()
 		switch (input)
 		{
 		case '1':
-			insertRandomNumber(anzahl);
+			insertRangeRandomNumber(anzahl);
 			break;
 		case '2':
 			insertownNumber(anzahl);
@@ -116,21 +144,17 @@ int main(int argc, char** argv)
 		while (input != '9')
 		{
 			
-		#ifdef _WIN32
-			system("cls");
-		#else
-			system ("clear");
-		#endif
-			cout
-				<< tree << endl
-				<< "Binarysearchtree" << endl
-				<< "1. Neue Zahl einfuegen" << endl
-				<< "2. Zahl loeschen" << endl
-				<< "3. Zahl suchen" << endl
-				<< "9. Beenden" << endl;
+		clear();
 
-
-			cin >> input;
+		cout
+			<< tree << endl
+			<< "Binarysearchtree" << endl
+			<< "1. Neue Zahl einfuegen" << endl
+			<< "2. Zahl loeschen" << endl
+			<< "3. Zahl suchen" << endl
+			<< "9. Beenden" << endl;
+		
+		cin >> input;
 			while (cin.fail())
 			{
 				std::cin.clear();
@@ -151,7 +175,7 @@ int main(int argc, char** argv)
 						switch (input)
 						{
 						case '1':
-							insertRandomNumber(anzahl);
+							insertRangeRandomNumber(anzahl);
 							break;
 						case '2':
 							insertownNumber(anzahl);
@@ -178,22 +202,14 @@ int main(int argc, char** argv)
 					{
 						cout << "Die Zahl "<<number << " ist NICHT vorhanden" << endl;
 					}
-					#ifdef _WIN32
-						system("pause");
-					#else
-						pause();
-					#endif
+					pause();
 					break;
 				case '9':
-					cout << "Programm wird beendet";
+					cout << "Programm wurd beendet";
 					break;
 				default:
 					cout << "Menuepunkt nicht vorhanden" << endl;
-					#ifdef _WIN32
-						system("pause");
-					#else
-						pause();
-					#endif
+					pause();
 				}
 		}
 
