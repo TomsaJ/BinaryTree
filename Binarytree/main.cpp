@@ -135,8 +135,10 @@ int main(int argc, char** argv)
 		
 
 		// Ausdrucken:
-		cout << "Tree:" << tree << endl; // erwartet: 2, 3, 4, 5, 7, 8, 9, 10,
-
+		/*cout
+			 << "Binarysearchtree" << endl
+			<< "Tree:" << tree << endl; // erwartet: 2, 3, 4, 5, 7, 8, 9, 10,
+			*/
 
 		/*
 		* Menue wird noch bearbeitet
@@ -147,8 +149,8 @@ int main(int argc, char** argv)
 		clear();
 
 		cout
-			<< tree << endl
 			<< "Binarysearchtree" << endl
+			<< "Tree:" << tree << endl
 			<< "1. Neue Zahl einfuegen" << endl
 			<< "2. Zahl loeschen" << endl
 			<< "3. Zahl suchen" << endl
