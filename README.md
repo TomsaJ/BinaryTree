@@ -23,8 +23,8 @@ Julian Maximilian Tomsa
 
 ## Project status
 Projekt befindet sich noch in der Bearbeitung
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Branch                 | Beschreibung           | Status        | PullRequest (Merge)           |
+| ---------------------- |:----------------------:| :------------:| -----------------------------:|
+| header_binarybaum      | Beginn des Projektes   | Abgeschlossen | gemergt in main am 14.12.2022 |
+| menue                  | Ausarbeitung des Menüs | Abgeschlossen | gemergt in main am 23.12.2022 |
+| randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | gemergt in menue am 23.12.2022 |
