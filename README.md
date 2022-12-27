@@ -5,7 +5,6 @@ Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
 
 ## Branchinfo
 
-Branch: <br/>
 | Branch                 | Beschreibung           | Bearbeitungsstatus        | Mergestatus                   | Mergdatum    | Zielbranch |
 |:---------------------- |:---------------------- | :------------------------:| :----------------------------:| :----------: | :------------- |
 | header_binarybaum      | Beginn des Projektes   | Abgeschlossen |Abgeschlossen| am 14.12.2022 | main  |
