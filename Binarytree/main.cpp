@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <ctime>
+#include <string>
 #include "binarytree.h"
 
 char input;
@@ -59,6 +60,7 @@ void insertRangeRandomNumber(int afrn)
 	{
 		maxnumber = max;
 	}
+	clock_t start = clock();
 	for (int i = 0; i < afrn;)
 	{
 		number = 1 + (rand()) + 1;
@@ -68,6 +70,10 @@ void insertRangeRandomNumber(int afrn)
 			i++;
 		}
 	}
+	clock_t end = clock();
+	double elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	std::cout << "Benoetigte Zeit zum Loeschen des Baums: " << elapsed_time << "ms" << std::endl;
+	pause();
 }
 
 void insertownNumber(int afon) //afon: anzahlforownnumber
@@ -108,6 +114,7 @@ void deletenode()
 
 void deletetree()
 {
+	clock_t start = clock();
 	for (int i = 0; i <= maxnumber; i++)
 	{
 		if (tree.search(i))
@@ -115,19 +122,28 @@ void deletetree()
 			tree.deleteNode(tree.search(i));
 		}
 	}
+	clock_t end = clock();
+	double elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	std::cout << "Benoetigte Zeit zum Loeschen des Baums: " << elapsed_time << "ms" << std::endl;
+	pause();
 }
 
 
 
 void start()
 {
+	cout << "Ueberspringen mit e" << endl;
 	cout << "Mit wie viele Knoten soll der Baum erstellt werden" << endl;
-	cin >> anzahl;
-	clear();
-	cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
-	cout << "1. Mit zufaelligen Zahlen" << endl;
-	cout << "2. Mit eigene Zahlen" << endl;
 	cin >> input;
+	while (input != 'e')
+	{
+		anzahl = static_cast<int>(input);
+		clear();
+		cout << "Ueberspringen mit e" << endl;
+		cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
+		cout << "1. Mit zufaelligen Zahlen" << endl;
+		cout << "2. Mit eigene Zahlen" << endl;
+		cin >> input;
 		switch (input)
 		{
 		case '1':
@@ -136,7 +152,11 @@ void start()
 		case '2':
 			insertownNumber(anzahl);
 			break;
+		default:
+			cout << "Menuepunkt nicht vorhanden" << endl;
+			pause();
 		}
+	}
 }
 
 int main(int argc, char** argv)
@@ -171,19 +191,16 @@ int main(int argc, char** argv)
 		*/
 		while (input != '9')
 		{
-			
-		clear();
-
-		cout
-			<< "Binarysearchtree" << endl
-			<< "Tree:" << tree << endl
-			<< "1. Neue Zahl einfuegen" << endl
-			<< "2. Zahl loeschen" << endl
-			<< "3. Zahl suchen" << endl
-			<< "4. Baum loeschen" << endl
-			<< "9. Beenden" << endl;
-		
-		cin >> input;
+			clear();
+			cout
+				<< "Binarysearchtree" << endl
+				<< "Tree:" << tree << endl
+				<< "1. Neue Zahl einfuegen" << endl
+				<< "2. Zahl loeschen" << endl
+				<< "3. Zahl suchen" << endl
+				<< "4. Baum loeschen" << endl
+				<< "9. Beenden" << endl;
+			cin >> input;
 			while (cin.fail())
 			{
 				std::cin.clear();
@@ -192,56 +209,56 @@ int main(int argc, char** argv)
 			}
 
 
-				switch (input)
-				{
-				case '1':
-					cout << "Wie viele Zahlen sollen hinzugefuegt werden" << endl;
-					cin >> anzahl;
-					cout << "1 Zufaellige?" << endl;
-					cout << "2 Eigene" << endl;
-					cin >> input;
-					try {
-						switch (input)
-						{
-						case '1':
-							insertRangeRandomNumber(anzahl);
-							break;
-						case '2':
-							insertownNumber(anzahl);
-							break;
-						}
-					}
-					catch (int& e)
+			switch (input)
+			{
+			case '1':
+				cout << "Wie viele Zahlen sollen hinzugefuegt werden" << endl;
+				cin >> anzahl;
+				cout << "1 Zufaellige?" << endl;
+				cout << "2 Eigene" << endl;
+				cin >> input;
+				try {
+					switch (input)
 					{
-
+					case '1':
+					insertRangeRandomNumber(anzahl);
+					break;
+					case '2':
+					insertownNumber(anzahl);
+					break;
 					}
-					break;
-
-				case '2':
-					deletenode();
-					break;
-				case '3':
-					cout << "Gesuchte Zahl:" << endl;
-					cin >> number;
-					if (tree.search(number) != nullptr)
-					{
-						cout << "Die Zahl "<<number << " ist vorhanden" << endl;
-					}
-					else
-					{
-						cout << "Die Zahl "<<number << " ist NICHT vorhanden" << endl;
-					}
-					pause();
-					break;
-				case '4':
-					deletetree();
-					break;
-				case '9':
-					break;
-				default:
-					cout << "Menuepunkt nicht vorhanden" << endl;
-					pause();
 				}
+				catch (int& e)
+				{
+
+				}
+				break;
+			case '2':
+				deletenode();
+				break;
+			case '3':
+				cout << "Gesuchte Zahl:" << endl;
+				cin >> number;
+				if (tree.search(number) != nullptr)
+				{
+					cout << "Die Zahl "<<number << " ist vorhanden" << endl;
+				}
+				else
+				{
+					cout << "Die Zahl "<<number << " ist NICHT vorhanden" << endl;
+				}
+				pause();
+				break;
+			case '4':
+				deletetree();
+				break;
+			case '9':
+				cout << "Programm wurde beendet" << endl;
+				break;
+			default:
+				cout << "Menuepunkt nicht vorhanden" << endl;
+				pause();
+			}
 		}
 
 	return 0;
