@@ -117,7 +117,7 @@ void deletetree()
 	clock_t start = clock();
 	for (int i = 0; i <= maxnumber; i++)
 	{
-		if (tree.search(i))
+		while (tree.search(i))
 		{
 			tree.deleteNode(tree.search(i));
 		}
@@ -132,34 +132,33 @@ void deletetree()
 
 void start()
 {
-	cout << "Ueberspringen mit e" << endl;
 	cout << "Mit wie viele Knoten soll der Baum erstellt werden" << endl;
+	cin >> anzahl;
+	//anzahl = static_cast<int>(input)-'0';
+	clear();
+	cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
+	cout << "1. Mit zufaelligen Zahlen" << endl;
+	cout << "2. Mit eigene Zahlen" << endl;
 	cin >> input;
-	while (input != 'e')
+	switch (input)
 	{
-		anzahl = static_cast<int>(input);
-		clear();
-		cout << "Ueberspringen mit e" << endl;
-		cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
-		cout << "1. Mit zufaelligen Zahlen" << endl;
-		cout << "2. Mit eigene Zahlen" << endl;
-		cin >> input;
-		switch (input)
-		{
-		case '1':
-			insertRangeRandomNumber(anzahl);
-			break;
-		case '2':
-			insertownNumber(anzahl);
-			break;
-		default:
-			cout << "Menuepunkt nicht vorhanden" << endl;
-			pause();
-		}
+	case '1':
+		insertRangeRandomNumber(anzahl);
+	break;
+	case '2':
+		insertownNumber(anzahl);
+	break;
+	default:
+		cout << "Menuepunkt nicht vorhanden" << endl;
+		pause();
+	break;
 	}
 }
 
-int main(int argc, char** argv)
+
+
+
+int main()
 {
 	
 		// TreeNode<int> tree(5);
@@ -199,7 +198,8 @@ int main(int argc, char** argv)
 				<< "2. Zahl loeschen" << endl
 				<< "3. Zahl suchen" << endl
 				<< "4. Baum loeschen" << endl
-				<< "9. Beenden" << endl;
+				<< "9. Beenden" << endl
+				<< "n. Neustart" << endl; //nur zum debuggen
 			cin >> input;
 			while (cin.fail())
 			{
@@ -254,6 +254,11 @@ int main(int argc, char** argv)
 				break;
 			case '9':
 				cout << "Programm wurde beendet" << endl;
+				break;
+			case 'n':
+				deletetree();
+				clear();
+				main();
 				break;
 			default:
 				cout << "Menuepunkt nicht vorhanden" << endl;
