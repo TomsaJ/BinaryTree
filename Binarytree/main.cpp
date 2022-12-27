@@ -9,6 +9,7 @@ char input;
 int inputnumber;
 int anzahl;
 int number;
+int maxnumber;
 SearchTree<int> tree;
 
 void clear()
@@ -28,8 +29,11 @@ void pause()
 		system("pause");
 	#else
 		string a;
-		cout << "Taste 9 und enter zum fortfahren drücken" << endl;
-		cin >> a ;
+		while (a != '9')
+		{
+			cout << "Taste 9 und enter zum fortfahren drücken ...." << endl;
+			cin >> a ;
+		}
 	#endif
 }
 
@@ -49,8 +53,12 @@ void insertRangeRandomNumber(int afrn)
 	clear();
 	cout << "Was soll die kleinste Zahl sein" << endl;
 	cin >> min;
-	cout << "Was soll die größte Zahl sein" << endl;
+	cout << "Was soll die groesste Zahl sein" << endl;
 	cin >> max;
+	if (max > maxnumber) 
+	{
+		maxnumber = max;
+	}
 	for (int i = 0; i < afrn;)
 	{
 		number = 1 + (rand()) + 1;
@@ -64,6 +72,11 @@ void insertRangeRandomNumber(int afrn)
 
 void insertownNumber(int afon) //afon: anzahlforownnumber
 {
+	if (afon > maxnumber)
+	{
+		maxnumber = afon;
+	}
+
 	for (int i = 0; i < afon; i++)
 	{
 		cout << "Zahl eingeben" << endl;
@@ -86,21 +99,34 @@ void deletenode()
 	}
 	else
 	{
-		cout << "Zahl ist in dem Tree nicht vorhanden und kann nicht gel�scht werden" << endl;
+		cout << "Zahl ist in dem Tree nicht vorhanden und kann nicht geloescht werden" << endl;
 	}
 
 	pause();
 	
 }
 
+void deletetree()
+{
+	for (int i = 0; i <= maxnumber; i++)
+	{
+		if (tree.search(i))
+		{
+			tree.deleteNode(tree.search(i));
+		}
+	}
+}
+
 
 
 void start()
 {
-	cout << "Mit wie viele Zahlen soll der Baum erstellt werden" << endl;
+	cout << "Mit wie viele Knoten soll der Baum erstellt werden" << endl;
 	cin >> anzahl;
-	cout << "1. Zufaellige Zahlen" << endl;
-	cout << "2. Eigene Zahlen" << endl;
+	clear();
+	cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
+	cout << "1. Mit zufaelligen Zahlen" << endl;
+	cout << "2. Mit eigene Zahlen" << endl;
 	cin >> input;
 		switch (input)
 		{
@@ -154,6 +180,7 @@ int main(int argc, char** argv)
 			<< "1. Neue Zahl einfuegen" << endl
 			<< "2. Zahl loeschen" << endl
 			<< "3. Zahl suchen" << endl
+			<< "4. Baum loeschen" << endl
 			<< "9. Beenden" << endl;
 		
 		cin >> input;
@@ -206,8 +233,10 @@ int main(int argc, char** argv)
 					}
 					pause();
 					break;
+				case '4':
+					deletetree();
+					break;
 				case '9':
-					cout << "Programm wurd beendet";
 					break;
 				default:
 					cout << "Menuepunkt nicht vorhanden" << endl;
