@@ -23,8 +23,10 @@ Julian Maximilian Tomsa
 
 ## Project status
 Projekt befindet sich noch in der Bearbeitung
-| Branch                 | Beschreibung           | Status        | PullRequest (Merge)           |
-| ---------------------- |:----------------------:| :------------:| -----------------------------:|
-| header_binarybaum      | Beginn des Projektes   | Abgeschlossen | gemergt in main am 14.12.2022 |
-| menue                  | Ausarbeitung des Menüs | Abgeschlossen | gemergt in main am 23.12.2022 |
-| randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | gemergt in menue am 23.12.2022 |
+| Branch                 | Beschreibung           | Bearbeitungsstatus        | Mergestatus                   | Mergdatum    | Zielbranch |
+| ---------------------- |:----------------------:| :------------------------:| :----------------------------:| :----------: | -------------:|
+| header_binarybaum      | Beginn des Projektes   | Abgeschlossen |Abgeschlossen| am 14.12.2022 | main  |
+| menue                  | Ausarbeitung des Menüs | Abgeschlossen | Abgeschlossen| am 23.12.2022 | main  |
+| randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | Abgeschlossen |am 23.12.2022 | menue  |
+| deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Wartet| | main|
+| menue                  | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| am 27.12.2022 | deletettree  |
