@@ -10,7 +10,7 @@ Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
 | header_binarybaum      | Beginn des Projektes   | Abgeschlossen |Abgeschlossen| am 14.12.2022 | main  |
 | menue                  | Ausarbeitung des Menüs | Abgeschlossen | Abgeschlossen| am 23.12.2022 | main  |
 | randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | Abgeschlossen |am 23.12.2022 | menue  |
-| deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Wartet| | main|
+| deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Wartet| vsl. 1. KW 2023 | main|
 | laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| am 27.12.2022 | deletetree  |
 
 ## Installation
