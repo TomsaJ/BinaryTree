@@ -11,7 +11,7 @@ Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
 | menue                  | Ausarbeitung des Menüs | Abgeschlossen | Abgeschlossen| am 23.12.2022 | main  |
 | randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | Abgeschlossen |am 23.12.2022 | menue  |
 | deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Wartet| | main|
-| menue                  | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| am 27.12.2022 | deletetree  |
+| laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| am 27.12.2022 | deletetree  |
 
 ## Installation
 Da Programm wird in der main.cpp ausgefüht.
