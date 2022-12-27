@@ -7,7 +7,7 @@ Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
 
 Branch: <br/>
 | Branch                 | Beschreibung           | Bearbeitungsstatus        | Mergestatus                   | Mergdatum    | Zielbranch |
-| ---------------------- |:---------------------- | :------------------------:| :----------------------------:| :----------: | -------------:|
+|:---------------------- |:---------------------- | :------------------------:| :----------------------------:| :----------: | :------------- |
 | header_binarybaum      | Beginn des Projektes   | Abgeschlossen |Abgeschlossen| am 14.12.2022 | main  |
 | menue                  | Ausarbeitung des Menüs | Abgeschlossen | Abgeschlossen| am 23.12.2022 | main  |
 | randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | Abgeschlossen |am 23.12.2022 | menue  |
