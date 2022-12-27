@@ -198,8 +198,8 @@ int main()
 				<< "2. Zahl loeschen" << endl
 				<< "3. Zahl suchen" << endl
 				<< "4. Baum loeschen" << endl
-				<< "9. Beenden" << endl
-				<< "n. Neustart" << endl; //nur zum debuggen
+				<< "9. Beenden" << endl;
+			//cout<< "n. Neustart" << endl; //nur zum debuggen
 			cin >> input;
 			while (cin.fail())
 			{
@@ -255,11 +255,11 @@ int main()
 			case '9':
 				cout << "Programm wurde beendet" << endl;
 				break;
-			case 'n':
+			/*case 'n':
 				deletetree();
 				clear();
 				main();
-				break;
+				break;*/
 			default:
 				cout << "Menuepunkt nicht vorhanden" << endl;
 				pause();
