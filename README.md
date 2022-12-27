@@ -6,9 +6,11 @@ Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
 ## Branchinfo
 
 Branch: <br/>
-header_binarybaum   -> Beginn des Projektes     (gemergt in main am 14.12.2022) <br/>
-menue               -> Ausarbeitung des Menüs   (gemergt in main am 23.12.2022)<br/>
-randomnumber        -> Erstellen von zufallzahlen (gemergt in menue am 23.12.2022)
+header_binarybaum   -> Beginn des Projektes -> Bearbeitung abgeschlossen     (gemergt in main am 14.12.2022) <br/>
+menue               -> Ausarbeitung des Menüs -> Bearbeitung abgeschlossen  (gemergt in main am 23.12.2022)<br/>
+randomnumber        -> Erstellen von zufallzahlen -> Bearbeitung abgeschlossen (gemergt in menue am 23.12.2022)<br/>
+deletetree          -> Löschen des ganzen Baums - Bearbeitung abgeschlossen (wartet aufs mergen)<br/>
+laufzeit            -> Laufzeitmessung fürs Löschen und Einfügen ->Bearbeitung abgeschlossen (gemergt in deletettree am 27.12.2022)<br/>
 
 ## Installation
 Da Programm wird in der main.cpp ausgefüht.
