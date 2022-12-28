@@ -22,17 +22,11 @@ Abbildung 1: Binärbaum [^2]
 | deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Wartet| vsl. 1.KW 2023 | main|
 | laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| am 27.12.2022 | deletetree  |
 
-## Installation
-Da Programm wird in der main.cpp ausgefüht.
-Es kann auf Windows so wie auf Linux und MacOs ausgeführt werden.
 
 ## Authors
 Laureen Roccotelli <br/>
 Hendrik Lange <br/>
 Julian Maximilian Tomsa
-
-## Project status
-Projekt befindet sich noch in der Bearbeitung
 
 ## Literatur
 [^1]: https://de.wikipedia.org/wiki/Bin%C3%A4rbaum
