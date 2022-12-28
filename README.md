@@ -12,10 +12,6 @@ Ein wichtiges Merkmal von Binärbäumen ist, dass sie immer ausbalanciert sind. 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pseudobinärersuchbaum.svg/1920px-Pseudobinärersuchbaum.svg.png" width="450px"/> <br/>
 Abbildung 1: Binärbaum [^2]
 
-<p align="center">
-  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true" alt="Sublime's custom image"/>
-</p>
-
 ## Branchinfo
 
 | Branch                 | Beschreibung           | Bearbeitungsstatus        | Mergestatus                   | Mergedatum    | Zielbranch |
