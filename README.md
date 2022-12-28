@@ -1,6 +1,8 @@
 # Binarytree
 
 Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
+
+
 Ein Binärbaum ist eine spezielle Art von Suchbaum, bei dem jeder Knoten maximal zwei Kinder hat. Die Kinder eines Knotens werden links und rechts genannt und der Knoten selbst wird als Wurzel bezeichnet. Die Wurzel des Baumes ist der einzige Knoten, der keinen Elternknoten hat.
 
 Binärbäume werden häufig in der Informatik verwendet, um Daten schnell zu speichern und zu suchen. Ein Beispiel für die Verwendung von Binärbäumen ist das sogenannte Suchbuch, das in vielen Programmiersprachen verwendet wird.
