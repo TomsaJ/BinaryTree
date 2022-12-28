@@ -8,10 +8,13 @@ Ein Binärbaum ist eine spezielle Art von Suchbaum, bei dem jeder Knoten maximal
 Binärbäume werden häufig in der Informatik verwendet, um Daten schnell zu speichern und zu suchen. Ein Beispiel für die Verwendung von Binärbäumen ist das sogenannte Suchbuch, das in vielen Programmiersprachen verwendet wird.
 
 Ein wichtiges Merkmal von Binärbäumen ist, dass sie immer ausbalanciert sind. Das bedeutet, dass die Tiefe aller Knoten im Baum immer möglichst gleich ist. Dies führt dazu, dass die Suche in einem Binärbaum immer sehr effizient ist und in der Regel schneller ist als in anderen Arten von Suchbäumen.[^1] <br/>
-<p align="center">
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pseudobinärersuchbaum.svg/1920px-Pseudobinärersuchbaum.svg.png" width="450px"/> <br/>
 Abbildung 1: Binärbaum [^2]
-<p/>
+
+<p align="center">
+  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true" alt="Sublime's custom image"/>
+</p>
 
 ## Branchinfo
 
