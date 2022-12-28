@@ -35,5 +35,5 @@ Julian Maximilian Tomsa
 Projekt befindet sich noch in der Bearbeitung
 
 ## Literatur
-[^1]: Das Informatik-Lexikon, "Binärbaum", https://www.informatik-lexikon.com/binaerbaum.html
+[^1]: https://de.wikipedia.org/wiki/Bin%C3%A4rbaum
 [^2]: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pseudobinärersuchbaum.svg/1920px-Pseudobinärersuchbaum.svg.png
