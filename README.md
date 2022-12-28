@@ -1,7 +1,7 @@
 # Binarytree
 
 Ein Projekt das in dem Modul Grundlagen der Informatik 3 entwickelt wurde. <br/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pseudobinärersuchbaum.svg/1920px-Pseudobinärersuchbaum.svg.png" width="315px"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pseudobinärersuchbaum.svg/1920px-Pseudobinärersuchbaum.svg.png" width="315px"/> <br/>
 Abbildung 1: Binärbaum [^1]
 
 ## Branchinfo
@@ -26,5 +26,5 @@ Julian Maximilian Tomsa
 ## Project status
 Projekt befindet sich noch in der Bearbeitung
 
-
+##Literatur
 [^1]: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pseudobinärersuchbaum.svg/1920px-Pseudobinärersuchbaum.svg.png
