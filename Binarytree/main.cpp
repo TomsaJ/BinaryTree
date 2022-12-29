@@ -125,6 +125,7 @@ void deletetree()
 	clock_t end = clock();
 	double elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
 	std::cout << "Benoetigte Zeit zum Loeschen des Baums: " << elapsed_time << "ms" << std::endl;
+	maxnumber = 0;
 	pause();
 }
 
@@ -253,7 +254,9 @@ int main()
 				deletetree();
 				break;
 			case '9':
-				cout << "Programm wurde beendet" << endl;
+				cout << endl;
+				cout << "Erstellt von " << endl
+					 << "Laureen Roccotelli, Hendrik Lange und Julian Tomsa" << endl;
 				break;
 			/*case 'n':
 				deletetree();
