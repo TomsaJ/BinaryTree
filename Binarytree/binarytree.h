@@ -251,7 +251,14 @@ public:
     friend std::ostream& operator<<(std::ostream& cout, const SearchTree& tree)
     {
         // cout << tree.root; // markiert rootNode nicht
-        cout << tree.root->left << "<" << tree.root->key << ">, " << tree.root->right; // markiert rootNode
+        if (tree.root != nullptr)
+        {
+            cout << tree.root->left << "<" << tree.root->key << ">, " << tree.root->right; // markiert rootNode
+        }
+        else
+        {
+            cout << "Tree is empty";
+        }
         return cout;
     }
 
