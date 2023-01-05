@@ -11,6 +11,7 @@ int inputnumber;
 int anzahl;
 int number;
 int maxnumber;
+string news = "";
 SearchTree<int> tree;
 
 void clear()
@@ -52,10 +53,21 @@ void insertRangeRandomNumber(int afrn)
 	int min;
 	int max;
 	clear();
+	if (news != "")
+	{
+		cout << news << endl;
+	}
 	cout << "Was soll die kleinste Zahl sein" << endl;
 	cin >> min;
 	cout << "Was soll die groesste Zahl sein" << endl;
 	cin >> max;
+	if (min > max)
+	{
+		news = "Kleinere Zahl ist grosser als die groessere Zahl";
+		insertRangeRandomNumber(afrn);
+		news = "";
+		return;
+	}
 	if (max > maxnumber) 
 	{
 		maxnumber = max;
@@ -135,7 +147,6 @@ void start()
 {
 	cout << "Mit wie viele Knoten soll der Baum erstellt werden" << endl;
 	cin >> anzahl;
-	//anzahl = static_cast<int>(input)-'0';
 	clear();
 	cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
 	cout << "1. Mit zufaelligen Zahlen" << endl;
@@ -161,34 +172,11 @@ void start()
 
 int main()
 {
-	
-		// TreeNode<int> tree(5);
-
-		// Einfuegen:
-		/*
-			Zufallgenerator funktioniert noch nicht ganz
-		*/
 
 		
 		srand(time(0));
-		/*for (int i = 0; i < 10; i++)
-		{
-			number = 1+(rand()% 15)+1;
-			tree.insert(number);
-		}*/
 
 		start();
-		
-
-		// Ausdrucken:
-		/*cout
-			 << "Binarysearchtree" << endl
-			<< "Tree:" << tree << endl; // erwartet: 2, 3, 4, 5, 7, 8, 9, 10,
-			*/
-
-		/*
-		* Menue wird noch bearbeitet
-		*/
 		while (input != '9')
 		{
 			clear();
