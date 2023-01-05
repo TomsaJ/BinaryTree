@@ -32,7 +32,7 @@ void pause()
 		string a;
 		while (a != '9')
 		{
-			cout << "Taste 9 und enter zum fortfahren drücken ...." << endl;
+			cout << "Taste 9 und Enter Drücken . . ." << endl;
 			cin >> a ;
 		}
 	#endif
@@ -115,7 +115,7 @@ void deletenode()
 void deletetree()
 {
 	clock_t start = clock();
-	for (int i = 0; i <= maxnumber; i++)
+	for (int i = 0; i <= maxnumber; i++) // besser ist eine Liste, in der die eingefügten Zahlen gespeichert sind!!!
 	{
 		while (tree.search(i))
 		{
