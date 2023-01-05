@@ -20,7 +20,7 @@ Abbildung 1: Binärbaum [^2]
 | menue                  | Ausarbeitung des Menüs | Abgeschlossen | Abgeschlossen | 23.12.2022 | main  |
 | randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | Abgeschlossen |23.12.2022 | menue  |
 | deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Abgeschlossen | 05.01.2023 | main|
-| laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| am 27.12.2022 | deletetree  |
+| laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| 27.12.2022 | deletetree  |
 
 
 ## Authors
