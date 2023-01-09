@@ -24,9 +24,9 @@ Abbildung 1: Binärbaum [^2]
 | Tests | Tests werden geschrieben | In Bearbeitung | | | main|
 
 ## Autoren
-# Laureen Roccotelli <br/>
-# Hendrik Lange <br/>
-# Julian Tomsa
+Laureen Roccotelli <br/>
+Hendrik Lange <br/>
+Julian Tomsa
 
 ## Literatur
 [^1]: https://de.wikipedia.org/wiki/Bin%C3%A4rbaum
