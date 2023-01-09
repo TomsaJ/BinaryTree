@@ -21,12 +21,12 @@ Abbildung 1: Binärbaum [^2]
 | randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | Abgeschlossen |23.12.2022 | menue  |
 | deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Abgeschlossen | 05.01.2023 | main|
 | laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| 27.12.2022 | deletetree  |
+| Tests | Tests werden geschrieben | In Bearbeitung | | | main|
 
-
-## Authors
-Laureen Roccotelli <br/>
-Hendrik Lange <br/>
-Julian Maximilian Tomsa
+## Autoren
+# Laureen Roccotelli <br/>
+# Hendrik Lange <br/>
+# Julian Tomsa
 
 ## Literatur
 [^1]: https://de.wikipedia.org/wiki/Bin%C3%A4rbaum
