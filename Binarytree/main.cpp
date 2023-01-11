@@ -107,7 +107,7 @@ void pause()
 	#ifdef _WIN32
 		system("pause");
 	#else
-		string a;
+		char a;
 		while (a != '9')
 		{
 			cout << "Taste 9 und Enter Drücken . . ." << endl;
