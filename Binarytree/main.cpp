@@ -6,6 +6,7 @@
 #include <string>
 #include "binarytree.h"
 
+
 char input;
 int inputnumber;
 int anzahl;
@@ -13,6 +14,82 @@ int number;
 int maxnumber;
 string news = "";
 SearchTree<int> tree;
+void pause();
+void deletetree();
+
+void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
+{
+	for (int i = 0; i < afrn; i++)
+	{
+		number = 1 + (rand() % 1000) + 1;
+		if (number > maxnumber)
+		{
+			maxnumber = number;
+		}
+		tree.insert(number);
+	}
+}
+
+void test()
+{
+	clock_t start;
+	clock_t end;
+	double elapsed_time;
+	start = clock();
+	insertRandomNumber(1000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das einfuegen von 1000 Zahlen hat " << elapsed_time << " ms gedauert." << endl;
+	start = clock();
+	tree.search(750);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das Suchen von der Zahl 750 hat " << elapsed_time << " ms gedauert." << endl;
+	deletetree();
+	start = clock();
+	insertRandomNumber(10000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das einfuegen von 10000 Zahlen hat " << elapsed_time << " ms gedauert." << endl;
+	start = clock();
+	tree.search(7500);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das Suchen von der Zahl 7500 hat " << elapsed_time << " ms gedauert." << endl;
+	deletetree();
+	start = clock();
+	insertRandomNumber(100000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das einfuegen von 100000 Zahlen hat " << elapsed_time << " ms gedauert." << endl;
+	start = clock();
+	tree.search(750000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das Suchen von der Zahl 750000 hat " << elapsed_time << " ms gedauert." << endl;
+	deletetree();
+	insertRandomNumber(1000000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das einfuegen von 100000 Zahlen hat " << elapsed_time << " ms gedauert." << endl;
+	start = clock();
+	tree.search(7500000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das Suchen von der Zahl 750000 hat " << elapsed_time << " ms gedauert." << endl;
+	deletetree();
+	insertRandomNumber(10000000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das einfuegen von 10000000 Zahlen hat " << elapsed_time << " ms gedauert." << endl;
+	start = clock();
+	tree.search(75000000);
+	end = clock();
+	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
+	cout << "Das Suchen von der Zahl 75000000 hat " << elapsed_time << " ms gedauert." << endl;
+	deletetree();
+	pause();
+}
 
 void clear()
 {
@@ -39,15 +116,6 @@ void pause()
 	#endif
 }
 
-void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
-{
-	for (int i = 0; i < afrn; i++)
-	{
-		number = 1 + (rand() % 15) + 1;
-		tree.insert(number);
-	}
-}
-
 void insertRangeRandomNumber(int afrn)
 {
 	int min;
@@ -63,7 +131,7 @@ void insertRangeRandomNumber(int afrn)
 	cin >> max;
 	if (min > max)
 	{
-		news = "Kleinere Zahl ist grosser als die groessere Zahl";
+		news = "Kleinere Zahl ist groesser als die groessere Zahl";
 		insertRangeRandomNumber(afrn);
 		news = "";
 		return;
@@ -126,28 +194,36 @@ void deletenode()
 
 void deletetree()
 {
+	int count = 0;
 	clock_t start = clock();
 	for (int i = 0; i <= maxnumber; i++) // besser ist eine Liste, in der die eingefügten Zahlen gespeichert sind!!!
 	{
 		while (tree.search(i))
 		{
 			tree.deleteNode(tree.search(i));
+			count++;
 		}
 	}
 	clock_t end = clock();
 	double elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	std::cout << "Benoetigte Zeit zum Loeschen des Baums: " << elapsed_time << "ms" << std::endl;
+	std::cout << "Benoetigte Zeit um den Baum mit "<< count << " Knoten zu loeschen: " << elapsed_time << "ms" << std::endl;
 	maxnumber = 0;
-	pause();
 }
 
 
 
 void start()
 {
+	cout << "Fuer die Test-Funktion gebe T ein " << endl;
 	cout << "Mit wie viele Knoten soll der Baum erstellt werden" << endl;
-	cin >> anzahl;
+	cin >> input;
+	
+	if (input == 'T') {
+		test();
+		return;
+	}
 	clear();
+	anzahl = input - 48;
 	cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
 	cout << "1. Mit zufaelligen Zahlen" << endl;
 	cout << "2. Mit eigene Zahlen" << endl;
@@ -240,6 +316,7 @@ int main()
 				break;
 			case '4':
 				deletetree();
+				pause();
 				break;
 			case '9':
 				cout << endl;
