@@ -71,12 +71,12 @@ void test()
 	insertRandomNumber(1000000);
 	end = clock();
 	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << "Das einfuegen von 100000 Zahlen hat " << elapsed_time << " ms gedauert." << endl;
+	cout << "Das einfuegen von 1000000 Zahlen hat " << elapsed_time << " ms gedauert." << endl;
 	start = clock();
 	tree.search(7500000);
 	end = clock();
 	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << "Das Suchen von der Zahl 750000 hat " << elapsed_time << " ms gedauert." << endl;
+	cout << "Das Suchen von der Zahl 7500000 hat " << elapsed_time << " ms gedauert." << endl;
 	deletetree();
 	insertRandomNumber(10000000);
 	end = clock();
@@ -107,7 +107,7 @@ void pause()
 	#ifdef _WIN32
 		system("pause");
 	#else
-		string a;
+		char a;
 		while (a != '9')
 		{
 			cout << "Taste 9 und Enter Drücken . . ." << endl;
