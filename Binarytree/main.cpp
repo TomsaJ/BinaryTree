@@ -216,14 +216,8 @@ void start()
 {
 	cout << "Fuer die Test-Funktion gebe T ein " << endl;
 	cout << "Mit wie viele Knoten soll der Baum erstellt werden" << endl;
-	cin >> input;
-	
-	if (input == 'T') {
-		test();
-		return;
-	}
+	cin >> anzahl;
 	clear();
-	anzahl = input - 48;
 	cout << "Wie sollen die " << anzahl << " Knoten erstellt werden" << endl;
 	cout << "1. Mit zufaelligen Zahlen" << endl;
 	cout << "2. Mit eigene Zahlen" << endl;
@@ -252,7 +246,22 @@ int main()
 		
 		srand(time(0));
 
-		start();
+		cout << "Welcher Modus soll gestartet werden?" << endl;
+		cout << "1. Testmodus" << endl << "2. Normalmodus" << endl;
+		cin >> input;
+		switch (input)
+		{
+		case '1':
+			test();
+			break;
+		case '2':
+			start();
+			break;
+		default:
+			cout << "Menuepunkt nicht vorhanden" << endl;
+			pause();
+		}
+
 		while (input != '9')
 		{
 			clear();
