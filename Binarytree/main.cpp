@@ -21,7 +21,7 @@ void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
 {
 	for (int i = 0; i < afrn; i++)
 	{
-		number = 1 + (rand() % 1000) + 1;
+		number = 1 + rand()+1;
 		if (number > maxnumber)
 		{
 			maxnumber = number;
@@ -143,7 +143,7 @@ void insertRangeRandomNumber(int afrn)
 	clock_t start = clock();
 	for (int i = 0; i < afrn;)
 	{
-		number = 1 + (rand()) + 1;
+		number = 1 + rand() + 1;
 		if( number >= min && number <= max)
 		{
 			tree.insert(number);
