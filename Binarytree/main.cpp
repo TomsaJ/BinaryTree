@@ -40,7 +40,7 @@ void test()
 	double elapsed_time;
 	int counter = 10000;
 
-	while (counter != 1e7+1)
+	while (counter <= (1e7))
 	{
 		cout << "Das einfuegen von "<< counter  << " Zahlen hat ";
 		start = clock();
