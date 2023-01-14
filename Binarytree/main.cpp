@@ -62,123 +62,24 @@ void test()
 		end = clock();
 		elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
 		cout << elapsed_time << " ms" << endl;
-		if (counter <= 10000) 
+		if (counter < 10000) 
 		{
-			counter = 100000;
+			counter += 1000;
 		}
-		else if (counter >= 1000000)
+		else if (counter >= 10000 && counter < 100000)
 		{
-			counter += 1000000;
+			counter += 10000;
 		}
-		else 
+		else if (counter >= 100000 && counter < 1000000)
 		{
 			counter += 100000;
 		}
+		else 
+		{
+			counter += 1000000;
+		}
 		cout<< endl;
 	}
-	/*
-	cout << "Das einfuegen von 1000 Zahlen hat " ;
-	start = clock();
-	insertRandomNumber(1000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout<< elapsed_time << " ms gedauert." << endl;
-
-	cout << "Das Suchen von der Zahl 750 hat " ;
-	start = clock();
-	tree.search(750);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout<< elapsed_time << " ms gedauert." << endl;
-
-	cout << "Benoetigte Zeit um den Baum zu loeschen: ";
-	start = clock();
-	testdeletetree();
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << "ms" << endl;
-
-	cout << "Das einfuegen von 10000 Zahlen hat ";
-	start = clock();
-	insertRandomNumber(10000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Das Suchen von der Zahl 7500 hat ";
-	start = clock();
-	tree.search(7500);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Benoetigte Zeit um den Baum zu loeschen: ";
-	start = clock();
-	testdeletetree();
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << "ms" << endl;
-
-	cout << "Das einfuegen von 100000 Zahlen hat ";
-	start = clock();
-	insertRandomNumber(100000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Das Suchen von der Zahl 750000 hat ";
-	start = clock();
-	tree.search(750000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Benoetigte Zeit um den Baum zu loeschen: ";
-	start = clock();
-	testdeletetree();
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << "ms" << endl;
-
-	cout << "Das einfuegen von 1000000 Zahlen hat ";
-	insertRandomNumber(1000000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Das Suchen von der Zahl 7500000 hat ";
-	start = clock();
-	tree.search(7500000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Benoetigte Zeit um den Baum zu loeschen: " ;
-	start = clock();
-	testdeletetree();
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout<< elapsed_time << "ms" << endl;
-
-	cout << "Das einfuegen von 10000000 Zahlen hat ";
-	insertRandomNumber(10000000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Das Suchen von der Zahl 75000000 hat ";
-	start = clock();
-	tree.search(75000000);
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout << elapsed_time << " ms gedauert." << endl;
-
-	cout << "Benoetigte Zeit um den Baum zu loeschen: " ;
-	start = clock();
-	testdeletetree();
-	end = clock();
-	elapsed_time = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000;
-	cout<< elapsed_time << "ms" << endl;*/
 	pause();
 }
 
