@@ -66,6 +66,10 @@ void test()
 		{
 			counter = 100000;
 		}
+		else if (counter >= 1000000)
+		{
+			counter += 1000000;
+		}
 		else 
 		{
 			counter += 100000;
