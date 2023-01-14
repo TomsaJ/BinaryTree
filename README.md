@@ -23,7 +23,7 @@ Abbildung 1: Binärbaum [^2]
 | laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| 27.12.2022 | deletetree  |
 | Tests | Tests werden geschrieben | Abgeschlossen | Abgeschlossen| 13.01.2023 | main|
 | ueberarbeitung_tests | Tests wurden überarbeitet | Abgeschlossen | Abgeschlossen| 14.01.2023 | main|
-| auslagern | Funktionen werden in eine separaten Datei ausgelagert | in Bearbeitung | |  | main|
+| funktion_auslagern | Funktionen werden in eine separaten Datei ausgelagert | Abgeschlossen (felgeschlagen) | --- | ---  | main|
 
 ## Autoren
 Laureen Roccotelli <br/>
