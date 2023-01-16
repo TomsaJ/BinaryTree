@@ -133,6 +133,9 @@
   <ItemGroup>
     <ClInclude Include="binarytree.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Uni\Grundlagen der Informatik 2\Programm\Geodaten\Pangea\test.tab" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

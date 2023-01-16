@@ -1,10 +1,23 @@
 // Binarytree.cpp : Diese Datei enth�lt die Funktion "main". Hier beginnt und endet die Ausf�hrung des Programms.
 //
-
+#pragma warning(disable : 4996)
 #include <iostream>
 #include <ctime>
 #include <string>
 #include "binarytree.h"
+
+#include <fstream>
+#include <cmath>
+
+#define ARRAY_SIZE 10000000
+#define ERDRADIUS 6371
+#define M_PI 3,141593
+
+struct point {
+	int x[ARRAY_SIZE];
+	int y [ARRAY_SIZE];
+	int z[ARRAY_SIZE];
+};
 
 
 char input;
@@ -13,6 +26,7 @@ int anzahl;
 int number;
 int maxnumber;
 string news = "";
+point tmp;
 SearchTree<int> tree;
 void pause();
 void clear();
@@ -23,18 +37,54 @@ void insertRandomNumber(int afrn) //afr: anzahlforrandomnumber
 {
 	for (int i = 0; i < afrn; i++)
 	{
-		number = 1 + rand()+1;
-		if (number > maxnumber)
+		if (tmp.x[i] > maxnumber)
 		{
 			maxnumber = number;
 		}
-		tree.insert(number);
+		tree.insert(tmp.x[i]);
 	}
+}
+
+point koordinaten(double breite, double laenge, int i) {
+	breite = breite * (M_PI / 180);
+	laenge = laenge * (M_PI / 180);
+
+	tmp.x[i] = ERDRADIUS * cos(breite) * cos(laenge);
+	tmp.y[i] = ERDRADIUS * cos(breite) * sin(laenge);
+	tmp.z[i] = ERDRADIUS * sin(breite);
+	return tmp;
+}
+
+void einlesen()
+{
+
+	string readbuffer;
+	string datum;
+	point current_point;
+	int i = 0;
+
+	ifstream input_dat("test.tab");
+
+	if (!input_dat.is_open()) {
+	std::cout << "Datei oeffnen fehlgeschlagen" << std::endl;
+	}
+	else {
+		while (std::getline(input_dat, readbuffer)) {
+			if (sscanf(readbuffer.c_str(), "%19s %ld %ld", datum.c_str(), &current_point.x, &current_point.y) == 3) {
+				point tmp = koordinaten(current_point.x[i], current_point.y[i], i);
+			}
+			else
+				std::cout << "Fehler beim Lesen: " << readbuffer << std::endl;
+			i++;
+		}
+	}
+	input_dat.close();
 }
 
 void test()
 {
 	clear();
+	einlesen();
 	clock_t start;
 	clock_t end;
 	double elapsed_time;
@@ -42,6 +92,7 @@ void test()
 
 	while (counter <= (1e7))
 	{
+		
 		cout << "Das einfuegen von "<< counter  << " Zahlen hat ";
 		start = clock();
 		insertRandomNumber(counter);
