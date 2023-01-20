@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 template<typename T>
@@ -68,24 +68,24 @@ public:
 
     TreeNode* search(T key)
     {
-        if (this->key == key)             // wenn der schl�ssel gleich gro� ist
+        if (this->key == key)             // if the key is equal
             return this;
-        if (this->key > key)               // wenn der schl�ssel kleiner ist
+        if (this->key > key)               // if the key is smaller
         {
-            if (left == nullptr)     // wenn linker pointer null ist dann den linken ausgeben
+            if (left == nullptr)     // if left-pointer is null, it will return the left one
                 return left;
             return left->search(key);
         }
         else
         {
-            if (right == nullptr)        // ansonsten den rechten zweig ausgeben
+            if (right == nullptr)        // else return right side
                 return right;
             return right->search(key);
         }
     }
 
 public:
-    // optional, aber praktisch zum debuggen:
+    // optional
     friend std::ostream& operator<<(std::ostream& cout, const TreeNode* tree)
     {
         if (tree == nullptr) return cout; // nothing to print
@@ -100,10 +100,10 @@ public:
 template<typename T>
 class SearchTree
 {
-    using Node = TreeNode<T>; // optional, Fuer uebersichtlichen Code
+    using Node = TreeNode<T>; // optional, for clean code
 
 private:
-    Node* root; // Wurzel (im Falle eines leeren Baumes: nullptr)
+    Node* root; // Root (in case of an empty key: nullptr)
 
 public:
     SearchTree() : root(nullptr) { }
@@ -140,18 +140,18 @@ public:
     void insert(const T key)
     {
         Node* newNode = new Node(key);
-        Node* prev = nullptr;            //vorg�nger zeiger
-        Node* x = root;                  //knoten auf wurzel
+        Node* prev = nullptr;            //pointer to previous
+        Node* x = root;                  //node to root
 
 
 
-        while (x != nullptr)               //solange unser knoten nicht auf null zeigt
+        while (x != nullptr)               //while the node doesnt point to null
         {
-            prev = x;                   //soll unser vorg�ngerzeiger gleich unser zeigerknoten sein
+            prev = x;                   //prev. pointer equals pointernode
 
-            if (newNode->key < x->key) //wenn unser schl�ssel den wir einf�gen wollen kleiner ist als der schl�ssel vom knoten
-                x = x->left;            //dann geben wir den aus
-            else                        //sosnt gehen wir rechts
+            if (newNode->key < x->key) //if the inserted key is smaller than the key from the node
+                x = x->left;            //the key is output
+            else                        //else, go to right
                 x = x->right;
         }
 
@@ -164,23 +164,23 @@ public:
         }
         else if (newNode->key < prev->key)
         {
-            prev->left = newNode;     //f�gt neues knoten links ein
+            prev->left = newNode;     //insert a new node left
         }
         else
-            prev->right = newNode;    //f�gt neues knoten rechts ein
+            prev->right = newNode;    //insert a new node right
     }
 
     void leftrotation(const T key)
     {
         Node* x = search(key);
-        Node* y = x->right;// bestimme y
-        x->right = y->left; // mache y�s linker Teilbaum zu x�s rechtem
+        Node* y = x->right;//  y
+        x->right = y->left; // y left subtree to x right subtree
 
         if (y->left != nullptr)
         {
             y->left->parent = x;
         }
-        y->parent = x->parent; // setze y�s parent auf x�s parent
+        y->parent = x->parent; // make ys parent to xs parent
 
         if (x->parent == nullptr)
         {
@@ -197,11 +197,11 @@ public:
             x->parent->right = y;
         }
 
-        y->left = x;// mache x zu y�s linkem Kind
+        y->left = x;// make x to y left Child
         x->parent = y;
     }
 
-    void deleteNode(Node* const node) // "const Node *const node" nicht zulaessig, da node sonst nicht korrekt geloescht werden koennte
+    void deleteNode(Node* const node) 
     {
         if (node->left == nullptr)
         {
@@ -247,13 +247,13 @@ public:
 
 
 public:
-    // optional, aber praktisch zum debuggen:
+    // optional
     friend std::ostream& operator<<(std::ostream& cout, const SearchTree& tree)
     {
-        // cout << tree.root; // markiert rootNode nicht
+        // cout << tree.root; // doesnt mark rootNode
         if (tree.root != nullptr)
         {
-            cout << tree.root->left << "<" << tree.root->key << ">, " << tree.root->right; // markiert rootNode
+            cout << tree.root->left << "<" << tree.root->key << ">, " << tree.root->right; // mark rootNode
         }
         else
         {
