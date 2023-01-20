@@ -12,19 +12,6 @@ Ein wichtiges Merkmal von Binärbäumen ist, dass sie immer ausbalanciert sind. 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pseudobinärersuchbaum.svg/1920px-Pseudobinärersuchbaum.svg.png" width="450px"/> <br/>
 Abbildung 1: Binärbaum [^2]
 
-## Branchinfo
-
-| Branch                 | Beschreibung           | Bearbeitungsstatus        | Mergestatus                   | Mergedatum    | Zielbranch |
-|:---------------------- |:---------------------- | :------------------------:| :----------------------------:| :----------: | :------------- |
-| header_binarybaum      | Beginn des Projektes   | Abgeschlossen |Abgeschlossen | 14.12.2022 | main  |
-| menue                  | Ausarbeitung des Menüs | Abgeschlossen | Abgeschlossen | 23.12.2022 | main  |
-| randomnumber           | Erstellen von zufallzahlen | Abgeschlossen | Abgeschlossen |23.12.2022 | menue  |
-| deletetree                 | Löschen des ganzen Baums | Abgeschlossen | Abgeschlossen | 05.01.2023 | main|
-| laufzeit                | Laufzeitmessung fürs Löschen und Einfügen | Abgeschlossen | Abgeschlossen| 27.12.2022 | deletetree  |
-| Tests | Tests werden geschrieben | Abgeschlossen | Abgeschlossen| 13.01.2023 | main|
-| ueberarbeitung_tests | Tests wurden überarbeitet | Abgeschlossen | Abgeschlossen| 14.01.2023 | main|
-| funktion_auslagern | Funktionen werden in eine separaten Datei ausgelagert | Abgeschlossen (fehlgeschlagen) | --- | ---  | main|
-
 ## Autoren
 Laureen Roccotelli <br/>
 Hendrik Lange <br/>
