@@ -262,7 +262,6 @@ void deleteTree()
 */
 void start()
 {
-	cout << "Fuer die Test-Funktion gebe T ein " << endl;
 	cout << "Mit wie viele Knoten soll der Baum erstellt werden" << endl;
 	cin >> anzahl;
 	clear();
